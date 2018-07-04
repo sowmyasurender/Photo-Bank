@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <item android:id="@+id/search"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search"
+        android:visible="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="ifRoom"
+
+
+        />
+    <item android:id="@+id/create_folder"
+        android:title="@string/create_folder"
+        android:icon="@drawable/ic_create_new_folder"
+        android:visible="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/cam"
+        android:title="@string/camera"
+        android:icon="@drawable/ic_camera_alt_black_24dp"
+        android:visible="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="ifRoom"
+
+        />
+
+
+
+</menu>

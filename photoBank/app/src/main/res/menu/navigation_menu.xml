@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android2="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas..android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="@string/select"
+            android:icon="@drawable/ic_select"
+            android:id="@+id/select_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android2:title="@string/select">
+
+        </item>
+        <item
+
+            android:icon="@drawable/ic_layout"
+            android:id="@+id/layout_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:title="@string/layout"
+            android2:title="@string/layout">
+
+        </item>
+        <item
+            android:icon="@drawable/ic_sort"
+            android:id="@+id/sort_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:title="@string/sort_by"
+            android2:title="@string/sort_by" />
+
+        <item
+            android:icon="@drawable/ic_share_album"
+            android:id="@+id/share_album_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:title="@string/share_album"
+            android2:title="@string/share_album" />
+
+
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="@string/settings"
+            android:id="@+id/settings_id"
+            android:icon="@drawable/ic_settings"
+            android2:title="@string/settings" />
+
+        <item
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="@string/rate_us"
+            android:id="@+id/rate_us_id"
+            android:icon="@drawable/ic_rate_us"
+            android2:title="@string/rate_us" />
+        <item
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="@string/share_app"
+            android:id="@+id/share_app_id"
+            android:icon="@drawable/ic_share"
+            android2:title="@string/share_app" />
+
+
+
+    </group>
+</menu>
