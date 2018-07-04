@@ -1,17 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.cvsr.photobank.photobank.MainActivity">
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvuser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/Text_username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        app:layout_constraintBottom_toTopOf="@+id/tvpwd"
+        app:layout_constraintEnd_toStartOf="@+id/etuser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.727"
+        tools:text="Username :" />
+
+    <TextView
+        android:id="@+id/tvpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="422dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="35dp"
+        android:text="@string/Text_password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/etpwd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvuser"
+        tools:text=" Password :" />
+
+    <EditText
+        android:id="@+id/etuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="@string/Hint_enter_username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btlogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvuser"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="@string/Hint_enterpwd"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvpwd"
+        app:layout_constraintTop_toBottomOf="@+id/etuser" />
+
+    <Button
+        android:id="@+id/btlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:text="@string/Button_login"
+        app:layout_constraintBottom_toTopOf="@+id/tvfgtpwd"
+        app:layout_constraintStart_toStartOf="@+id/tvfgtpwd"
+        app:layout_constraintTop_toBottomOf="@+id/etuser"
+        tools:text="Login" />
+
+    <TextView
+        android:id="@+id/tvfgtpwd"
+        android:layout_width="138dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginRight="66dp"
+        android:clickable="true"
+        android:text="@string/Button_forgetpwd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+        android:textSize="@dimen/new_size"
+        app:layout_constraintBottom_toTopOf="@+id/tvsignup"
+        app:layout_constraintEnd_toEndOf="@+id/tvsignup"
+        app:layout_constraintTop_toBottomOf="@+id/btlogin"
+        tools:text="Forgot password ?" />
+
+    <TextView
+        android:id="@+id/tvsignup"
+        android:layout_width="73dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="193dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:clickable="true"
+        android:text="@string/Button_signup"
+        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+        android:textSize="@dimen/New_size2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvfgtpwd"
+        tools:text="@string/Text_signup" />
+
+</android.support.constraint.ConstraintLayout>
