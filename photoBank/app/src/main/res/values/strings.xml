@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">Photo Bank</string>
+    <string name="btn_signin_with_facebook">Sign in with Facebook</string>
+    <string name="btn_signin_with_google">Sign in with Google</string>
     <string name="Text_username">username</string>
     <string name="Text_password">Password</string>
     <string name="Button_login">Login</string>
     <string name="Text_forgetpass">forgetpwd</string>
     <string name="Button_forgetpwd">forget password ?</string>
+
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="signup_text">Dont have an account? Sign up here</string>
+    <string name="sign_in_button_text">SIGN IN</string>
     <string name="Button_signup">signup</string>
     <string name="Hint_enter_username">enter username</string>
     <string name="Hint_enterpwd">enter password</string>

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OnClickButtonListener() {
-        TextView textView3=(TextView)findViewById(R.id.tvsignup);
+        TextView textView3=(TextView)findViewById(R.id.link_signup);
         textView3.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void OnClickButtonListener1() {
-        Button btlogin=(Button) findViewById(R.id.btlogin);
+        Button btlogin=(Button) findViewById(R.id.btn_login);
         btlogin.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
