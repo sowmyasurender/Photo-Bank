@@ -26,7 +26,7 @@ public class SignupActivity extends AppCompatActivity{
         btsignup.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
-                        Intent intent = new Intent(".Album_Activity");
+                        Intent intent = new Intent(".AlbumActivity");
                         startActivity(intent);
                     }
                 }
