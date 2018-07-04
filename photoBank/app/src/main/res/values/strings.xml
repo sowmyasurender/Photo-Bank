@@ -8,6 +8,9 @@
     <string name="Text_forgetpass">forgetpwd</string>
     <string name="Button_forgetpwd">forget password ?</string>
 
+    <string name="invalid_password">Password should atleast be 6 characters long</string>
+    <string name="invalid_username">Please enter a valid Email</string>
+    <string name="empty_password">Please enter your password</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="signup_text">Dont have an account? Sign up here</string>
