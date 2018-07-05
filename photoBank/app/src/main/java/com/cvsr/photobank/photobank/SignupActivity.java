@@ -28,19 +28,20 @@ public class SignupActivity extends AppCompatActivity {
 
         editTextEmail= (EditText)findViewById(R.id.input_email) ;
         editTextPassword= (EditText)findViewById(R.id.input_password);
-        editTextCnfPassword=(EditText)findViewById(R.id.input_password);
+        editTextCnfPassword=(EditText)findViewById(R.id.input_cnf_password);
         OnClickButtonListener();
 
     }
 
 
     public void OnClickButtonListener() {
-        Button bt_signup=(Button) findViewById(R.id.btsignup);
+        Button bt_signup=(Button) findViewById(R.id.btn_signup);
         bt_signup.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
                         final String email = editTextEmail.getText().toString();
                         final String pass = editTextPassword.getText().toString();
+                        final String cnf_pass = editTextCnfPassword.getText().toString();
 
                         if (!isValidEmail(email)) {
                             editTextEmail.setError(getText(R.string.invalid_username));
@@ -48,7 +49,11 @@ public class SignupActivity extends AppCompatActivity {
                         if (!isValidPassword(pass)) {
                             editTextPassword.setError(getText(R.string.empty_password));
                         }
-                        if (isValidEmail(email) && isValidPassword(pass)){
+
+                        if (!pass.equals(cnf_pass)) {
+                            editTextCnfPassword.setError("Passwords donot match");
+                        }
+                        if (isValidEmail(email) && isValidPassword(pass) && pass.equals(cnf_pass)){
                             Intent intent = new Intent(".AlbumActivity");
                             startActivity(intent);
                         }
