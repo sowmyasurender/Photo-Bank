@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if (isValidEmail(email) && isValidPassword(pass))
                         {
-                            Intent intent = new Intent(".AlbumActivity");
+                            Intent intent = new Intent(".ImageList");
                             startActivity(intent);
                         }
 
