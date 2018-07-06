@@ -4,119 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context=".SignupActivity">
 
-    <Button
-        android:id="@+id/btsignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="110dp"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:text="@string/Btsignup"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:textAlignment="center"
+        android:id="@+id/coordinator_layout">
 
-    <TextView
-        android:id="@+id/tvfn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/FName"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toStartOf="@+id/etfn"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etfn"
-        tools:text="@string/FName" />
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvmail"
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_marginBottom="67dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/Tvtext"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/tvpwd"
-        app:layout_constraintStart_toStartOf="parent" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="@dimen/dimenMarginLeft"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvpn"
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:layout_marginBottom="39dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="43dp"
-        android:text="@string/Tvphno"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="@+id/tvpwd"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvmail" />
+                <EditText android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email_hint"
+                    android:maxLines="1"/>
 
-    <TextView
-        android:id="@+id/tvpwd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="11dp"
-        android:text="@string/Textpwdsignu"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etpwd" />
+                <EditText
+                    android:id="@+id/input_fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fname_hint"
+                    android:maxLines="1"/>
 
-    <EditText
-        android:id="@+id/etfn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:layout_marginTop="38dp"
-        android:ems="10"
-        android:hint="@string/hint"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvfn"
-        app:layout_constraintTop_toTopOf="parent" />
+                <EditText
+                    android:id="@+id/input_lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lname_hint"
+                    android:maxLines="1"/>
 
-    <EditText
-        android:id="@+id/etmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:ems="10"
-        android:hint="@string/Hintmail"
-        android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/etfn"
-        app:layout_constraintTop_toBottomOf="@+id/etfn" />
+                <EditText
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password_hint"
+                    android:inputType="textPassword" />
 
-    <EditText
-        android:id="@+id/etpn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:ems="10"
-        android:hint="@string/HintPh"
-        android:inputType="phone"
-        app:layout_constraintStart_toStartOf="@+id/etmail"
-        app:layout_constraintTop_toBottomOf="@+id/etmail" />
+                <EditText android:id="@+id/input_cnf_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/cnf_password_hint"/>
 
-    <EditText
-        android:id="@+id/etpwd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:ems="10"
-        android:hint="@string/Hint_enterpwd"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/etpn"
-        app:layout_constraintTop_toBottomOf="@+id/etpn" />
+                <Button
+                    android:id="@+id/btn_signup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/buttonMargin"
+                    android:layout_marginBottom="@dimen/buttonMargin"
+                    android:padding="@dimen/padding"
+                    android:textSize="@dimen/textSize"
+                    android:onClick="onClick"
+                    android:textColor="@color/text_white"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/signup"/>
+
+                <TextView android:id="@+id/link_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_top"
+                    android:text="@string/link_login"
+                    android:gravity="center"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/textSize"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
 </android.support.constraint.ConstraintLayout>
