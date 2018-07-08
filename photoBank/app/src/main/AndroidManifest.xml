@@ -23,6 +23,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".MenuActivity">
+            <intent-filter>
+                <action android:name=".MenuActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
         <activity android:name=".SignupActivity">
             <intent-filter>
                 <action android:name=".SignupActivity" />

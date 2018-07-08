@@ -8,4 +8,6 @@
     <color name="text_white">#FFFFFF</color>
     <color name="text_black">#000000</color>
     <color name="light_grey" >#B1B3B3</color>
+    <color name="list_item_title">#888B8D</color>
+    <color name="list_background">#FFFFFF</color>
 </resources>

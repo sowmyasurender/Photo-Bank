@@ -31,6 +31,18 @@
     <string name="hint">enter your Full Name</string>
     <string name="Text">enter your Full Name</string>
     <string name="FName">Full Name :</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item>Helplines</item>
+        <item>Tactics</item>
+        <item>Family</item>
+        <item>Defence</item>
+    </string-array>
+
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <string name="desc_list_item_icon">Item Icon</string>
     <string name="Textfn">Name</string>
     <string name="Tvmail">Mail-Id</string>
     <string name="Tvtext">Mail-Id :</string>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_helpline"
+            android:title="Helpline" />
+
+        <!--android:icon="@mipmap/event"-->
+
+        <item
+            android:id="@+id/nav_family"
+            android:title="Family" />
+        <item
+            android:id="@+id/nav_tactics"
+            android:title="Tactics" />
+
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:title="Profile" />
+            <item
+                android:id="@+id/nav_share"
+                android:title="Share" />
+        </menu>
+    </item>
+
+</menu>
