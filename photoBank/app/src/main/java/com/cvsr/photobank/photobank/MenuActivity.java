@@ -125,8 +125,8 @@ public class MenuActivity extends AppCompatActivity {
                 return starredEventsFragment;
 
             case 2:
-                HelplineFragment scheduleFragment = new HelplineFragment();
-                return scheduleFragment;
+                TipsFragment tipsFragment = new TipsFragment();
+                return tipsFragment;
 
             default:
                 return new HelplineFragment();
@@ -211,7 +211,7 @@ public class MenuActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawers();
-            return;
+            return;///
         }
 
         if (shouldLoadHomeFragOnBackPress) {
