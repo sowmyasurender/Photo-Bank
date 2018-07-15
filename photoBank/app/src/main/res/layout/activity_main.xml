@@ -9,12 +9,9 @@
     tools:context=".MainActivity">
 
     <android.support.design.widget.CoordinatorLayout
-        android:layout_height="0dp"
-        android:layout_width="0dp"
-        android:textAlignment="center"
-        android:id="@+id/coordinator_layout"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:textAlignment="center">
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:fb="http://schemas.android.com/apk/res-auto"
@@ -82,12 +79,5 @@
 
     </android.support.design.widget.CoordinatorLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteY="354dp"
-        tools:layout_editor_absoluteX="69dp"
-        android:id="@+id/imageView" />
 
 </android.support.constraint.ConstraintLayout>
