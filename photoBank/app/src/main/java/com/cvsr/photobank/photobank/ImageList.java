@@ -32,7 +32,7 @@ import com.cvsr.photobank.photobank.Image;
 public class ImageList extends AppCompatActivity {
 
     private String TAG = MainActivity.class.getSimpleName();
-    private static final String endpoint = "https://api.androidhive.info/json/glide.json";
+    private static final String endpoint = "https://raw.githubusercontent.com/sowmyasurender/Photo-Bank/master/photojson.json";
     private ArrayList<Image> images;
     private ProgressDialog pDialog;
     private GalleryAdapter mAdapter;

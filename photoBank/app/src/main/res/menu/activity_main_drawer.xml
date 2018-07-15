@@ -4,28 +4,37 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_helpline"
-            android:title="Helpline" />
+            android:title="Helplines" />
+
+
+        <item
+            android:id="@+id/nav_profile"
+            android:title="Defence Tips" />
 
         <!--android:icon="@mipmap/event"-->
 
-        <item
-            android:id="@+id/nav_family"
-            android:title="Family" />
+        <!--<item-->
+            <!--android:id="@+id/nav_family"-->
+            <!--android:title="Family" />-->
         <item
             android:id="@+id/nav_tactics"
             android:title="Tactics" />
 
+
+
+        <item
+            android:id="@+id/nav_share"
+            android:title="Share" />
+
+
+        <item
+            android:id="@+id/about_app"
+            android:title="About App" />
+
+
+        <item
+            android:id="@+id/share_app"
+            android:title="Share App" />
+
     </group>
-
-    <item android:title="Other">
-        <menu>
-            <item
-                android:id="@+id/nav_profile"
-                android:title="Profile" />
-            <item
-                android:id="@+id/nav_share"
-                android:title="Share" />
-        </menu>
-    </item>
-
 </menu>

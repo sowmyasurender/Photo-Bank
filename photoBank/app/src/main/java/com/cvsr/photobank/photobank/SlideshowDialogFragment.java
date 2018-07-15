@@ -35,6 +35,17 @@ public class SlideshowDialogFragment extends DialogFragment {
     private TextView lblCount, lblTitle, lblDate;
     private int selectedPosition = 0;
 
+
+
+
+
+
+
+
+
+
+
+
     static SlideshowDialogFragment newInstance() {
         SlideshowDialogFragment f = new SlideshowDialogFragment();
         return f;

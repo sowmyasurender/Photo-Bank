@@ -9,10 +9,12 @@
     tools:context=".MainActivity">
 
     <android.support.design.widget.CoordinatorLayout
-        android:layout_height="fill_parent"
-        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
         android:textAlignment="center"
-        android:id="@+id/coordinator_layout">
+        android:id="@+id/coordinator_layout"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:fb="http://schemas.android.com/apk/res-auto"
@@ -29,19 +31,6 @@
                 tools:context=".SignInActivity" >
 
 
-                <Button
-                    android:id="@+id/btn_sign_in_google"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimenMarginBottom"
-                    android:layout_marginLeft="@dimen/dimenMarginLeft"
-                    android:layout_marginRight="@dimen/dimenMarginRight"
-                    android:background="@color/google_signin"
-                    android:text="@string/btn_signin_with_google"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                    android:textColor="@color/text_white"
-                    android:textStyle="bold"
-                    android:drawableLeft="@drawable/google_plus"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -92,5 +81,13 @@
         </ScrollView>
 
     </android.support.design.widget.CoordinatorLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteY="354dp"
+        tools:layout_editor_absoluteX="69dp"
+        android:id="@+id/imageView" />
 
 </android.support.constraint.ConstraintLayout>

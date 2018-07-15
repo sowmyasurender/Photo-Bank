@@ -33,7 +33,7 @@ public class MenuActivity extends AppCompatActivity {
     private static  String TAG_FAB ="list";
     private static final String HELP_LINE = "helpline";
     private static final String TAG_FAMILY = "family";
-    private static final String TAG_TACTICS = "tactics";
+    private static final String TAG_TACTICS = "tips";
     private static final String TAG_NAVIGATE = "navigate";
     public static String CURRENT_TAG = HELP_LINE;
 
@@ -153,16 +153,12 @@ public class MenuActivity extends AppCompatActivity {
                         navItemIndex = 0;
                         CURRENT_TAG = HELP_LINE;
                         break;
-                    case R.id.nav_family:
-                        navItemIndex = 1;
-                        CURRENT_TAG = TAG_FAMILY;
-                        break;
                     case R.id.nav_tactics:
                         navItemIndex = 2;
                         CURRENT_TAG = TAG_TACTICS;
                         break;
                     case R.id.nav_profile:
-                        startActivity(new Intent(MenuActivity.this, SignupActivity.class));
+                        startActivity(new Intent(MenuActivity.this, ImageList.class));
                         drawer.closeDrawers();
                         return true;
                     case R.id.nav_share:
