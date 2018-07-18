@@ -162,7 +162,19 @@ public class MenuActivity extends AppCompatActivity {
                         drawer.closeDrawers();
                         return true;
                     case R.id.nav_share:
+//                        Intent shareIntent = new Intent();
+//                        shareIntent.setAction(Intent.ACTION_SEND);
+//                        shareIntent.putExtra(Intent.EXTRA_STREAM, uriToImage);
+//                        shareIntent.setType("image/jpeg");
+//                        startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
                         // launch new intent instead of loading fragment
+
+                        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                        shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        shareIntent.setType("text/plain");
+                        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Hey, download this app!");
+                        startActivity(shareIntent);
+
                         // TODO : Share APP
 
                     default:

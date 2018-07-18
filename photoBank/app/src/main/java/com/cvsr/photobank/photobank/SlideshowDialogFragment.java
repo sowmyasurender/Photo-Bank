@@ -36,16 +36,6 @@ public class SlideshowDialogFragment extends DialogFragment {
     private int selectedPosition = 0;
 
 
-
-
-
-
-
-
-
-
-
-
     static SlideshowDialogFragment newInstance() {
         SlideshowDialogFragment f = new SlideshowDialogFragment();
         return f;
@@ -58,7 +48,6 @@ public class SlideshowDialogFragment extends DialogFragment {
         viewPager = (ViewPager) v.findViewById(R.id.viewpager);
         lblCount = (TextView) v.findViewById(R.id.lbl_count);
         lblTitle = (TextView) v.findViewById(R.id.title);
-        lblDate = (TextView) v.findViewById(R.id.date);
 
         images = (ArrayList<Image>) getArguments().getSerializable("images");
         selectedPosition = getArguments().getInt("position");
@@ -104,7 +93,6 @@ public class SlideshowDialogFragment extends DialogFragment {
 
         Image image = images.get(position);
         lblTitle.setText(image.getName());
-        lblDate.setText(image.getTimestamp());
     }
 
     @Override

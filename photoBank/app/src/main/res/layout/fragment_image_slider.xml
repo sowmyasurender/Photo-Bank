@@ -20,9 +20,9 @@
         android:textSize="16dp"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:orientation="vertical"
@@ -37,14 +37,7 @@
             android:textSize="16dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:textColor="@android:color/white" />
 
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
