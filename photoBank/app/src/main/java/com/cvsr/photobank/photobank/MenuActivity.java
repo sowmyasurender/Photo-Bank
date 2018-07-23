@@ -15,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.cvsr.photobank.photobank.HomePage;
 import com.cvsr.photobank.photobank.ImageList;
 import com.cvsr.photobank.photobank.HelplineFragment;
 import com.cvsr.photobank.photobank.R;
@@ -32,10 +34,10 @@ public class MenuActivity extends AppCompatActivity {
 
     private static  String TAG_FAB ="list";
     private static final String HELP_LINE = "helpline";
-    private static final String TAG_FAMILY = "family";
+    private static final String TAG_HOME = "home";
     private static final String TAG_TACTICS = "tips";
-    private static final String TAG_NAVIGATE = "navigate";
-    public static String CURRENT_TAG = HELP_LINE;
+    private static final String TAG_SHARE = "share";
+    public static String CURRENT_TAG = TAG_HOME;
 
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
@@ -54,9 +56,6 @@ public class MenuActivity extends AppCompatActivity {
         menuHandler = new Handler();
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        fab = (FloatingActionButton) findViewById(R.id.fab);
-
-        // load toolbar titles from string resources
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
 
         // initializing navigation menu
@@ -69,11 +68,6 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    /*
-     * Returns respected fragment that user
-     * selected from navigation menu
-     */
-
     private void loadHomeFragment() {
 
         selectNavMenu();
@@ -84,8 +78,6 @@ public class MenuActivity extends AppCompatActivity {
         if (getSupportFragmentManager().findFragmentByTag(CURRENT_TAG) != null) {
             drawer.closeDrawers();
 
-            // show or hide the fab button
-//            toggleFab();
             return;
         }
 
@@ -109,7 +101,6 @@ public class MenuActivity extends AppCompatActivity {
             menuHandler.post(mPendingRunnable);
         }
 
-//        toggleFab();
 
         drawer.closeDrawers();
 
@@ -120,16 +111,21 @@ public class MenuActivity extends AppCompatActivity {
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
 
-            case 1:
-                HelplineFragment starredEventsFragment = new HelplineFragment();
-                return starredEventsFragment;
+            case 0:
+                HomePage homePageFragment = new HomePage();
+                return homePageFragment;
 
-            case 2:
+            case 1:
+                HelplineFragment helplineFragment = new HelplineFragment();
+                return helplineFragment;
+
+            case 3:
                 TipsFragment tipsFragment = new TipsFragment();
                 return tipsFragment;
 
             default:
-                return new HelplineFragment();
+                return new HomePage();
+
         }
     }
 
@@ -149,33 +145,37 @@ public class MenuActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
                 switch (menuItem.getItemId()) {
+                    case R.id.nav_home:
+                        navItemIndex=0;
+                        CURRENT_TAG=TAG_HOME;
+                        break;
+
                     case R.id.nav_helpline:
-                        navItemIndex = 0;
+                        navItemIndex = 1;
                         CURRENT_TAG = HELP_LINE;
                         break;
+
                     case R.id.nav_tactics:
-                        navItemIndex = 2;
+                        navItemIndex = 3;
                         CURRENT_TAG = TAG_TACTICS;
                         break;
+
                     case R.id.nav_profile:
                         startActivity(new Intent(MenuActivity.this, ImageList.class));
                         drawer.closeDrawers();
                         return true;
-                    case R.id.nav_share:
-//                        Intent shareIntent = new Intent();
-//                        shareIntent.setAction(Intent.ACTION_SEND);
-//                        shareIntent.putExtra(Intent.EXTRA_STREAM, uriToImage);
-//                        shareIntent.setType("image/jpeg");
-//                        startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
-                        // launch new intent instead of loading fragment
 
+                    case R.id.nav_share:
+                        navItemIndex = 4;
+                        CURRENT_TAG=TAG_SHARE;
                         Intent shareIntent = new Intent(Intent.ACTION_SEND);
                         shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         shareIntent.setType("text/plain");
                         shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Hey, download this app!");
                         startActivity(shareIntent);
 
-                        // TODO : Share APP
+                    case R.id.about_app:
+                        navItemIndex = 5;
 
                     default:
                         navItemIndex = 0;

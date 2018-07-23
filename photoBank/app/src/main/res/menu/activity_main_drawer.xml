@@ -2,39 +2,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home" />
+
         <item
             android:id="@+id/nav_helpline"
             android:title="Helplines" />
-
 
         <item
             android:id="@+id/nav_profile"
             android:title="Defence Tips" />
 
-        <!--android:icon="@mipmap/event"-->
-
-        <!--<item-->
-            <!--android:id="@+id/nav_family"-->
-            <!--android:title="Family" />-->
         <item
             android:id="@+id/nav_tactics"
             android:title="Tactics" />
 
-
-
         <item
             android:id="@+id/nav_share"
-            android:title="Share" />
-
+            android:title="Share App" />
 
         <item
             android:id="@+id/about_app"
             android:title="About App" />
-
-
-        <item
-            android:id="@+id/share_app"
-            android:title="Share App" />
 
     </group>
 </menu>

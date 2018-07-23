@@ -33,10 +33,12 @@
     <string name="FName">Full Name :</string>
 
     <string-array name="nav_item_activity_titles">
+        <item>Home</item>
         <item>Helplines</item>
+        <item>Defence Tips</item>
         <item>Tactics</item>
-        <item>Family</item>
-        <item>Defence</item>
+        <item>Share App</item>
+        <item>About App</item>
     </string-array>
 
     <string name="openDrawer">open_drawer</string>
