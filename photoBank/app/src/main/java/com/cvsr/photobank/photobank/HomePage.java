@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ public class HomePage extends Fragment {
     private static final Integer[] XMEN= {R.drawable.beast,R.drawable.charles,R.drawable.magneto,R.drawable.mystique,R.drawable.wolverine};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
 
+    Timer swipeTimer = new Timer();
 
 
     @Override
@@ -47,17 +49,32 @@ public class HomePage extends Fragment {
                 mPager.setCurrentItem(currentPage++, true);
             }
         };
-        Timer swipeTimer = new Timer();
         swipeTimer.schedule(new TimerTask() {
             @Override
             public void run() {
+                Log.i("################","repeatinh");
                 handler.post(Update);
             }
         }, 2500, 2500);
 
-
-
     return rootView;
     }
 
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        swipeTimer.cancel();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        swipeTimer.cancel();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        swipeTimer.cancel();
+    }
 }
