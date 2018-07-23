@@ -54,7 +54,7 @@ public class SignupActivity extends AppCompatActivity {
                             editTextCnfPassword.setError("Passwords donot match");
                         }
                         if (isValidEmail(email) && isValidPassword(pass) && pass.equals(cnf_pass)){
-                            Intent intent = new Intent(".MenuActivity");
+                            Intent intent = new Intent(".HomePage");
                             startActivity(intent);
                         }
                     }
