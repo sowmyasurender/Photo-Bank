@@ -123,6 +123,7 @@ public class MenuActivity extends AppCompatActivity {
                 TipsFragment tipsFragment = new TipsFragment();
                 return tipsFragment;
 
+
             default:
                 return new HomePage();
 
@@ -176,6 +177,8 @@ public class MenuActivity extends AppCompatActivity {
 
                     case R.id.about_app:
                         navItemIndex = 5;
+
+
 
                     default:
                         navItemIndex = 0;

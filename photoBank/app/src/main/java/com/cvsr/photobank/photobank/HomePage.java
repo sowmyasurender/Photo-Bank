@@ -20,7 +20,7 @@ import me.relex.circleindicator.CircleIndicator;
 public class HomePage extends Fragment {
     private static ViewPager mPager;
     private static int currentPage = 0;
-    private static final Integer[] XMEN= {R.drawable.beast,R.drawable.charles,R.drawable.magneto,R.drawable.mystique,R.drawable.wolverine};
+    private static final Integer[] XMEN= {R.drawable.ptusha,R.drawable.nirupama,R.drawable.mcmarrycom,R.drawable.kiranbedi,R.drawable.kalpana};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
 
     Timer swipeTimer = new Timer();
@@ -52,7 +52,6 @@ public class HomePage extends Fragment {
         swipeTimer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Log.i("################","repeatinh");
                 handler.post(Update);
             }
         }, 2500, 2500);
