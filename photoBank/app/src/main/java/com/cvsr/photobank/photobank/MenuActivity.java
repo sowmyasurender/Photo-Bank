@@ -2,6 +2,7 @@ package com.cvsr.photobank.photobank;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -127,6 +128,7 @@ public class MenuActivity extends AppCompatActivity {
             default:
                 return new HomePage();
 
+
         }
     }
 
@@ -177,6 +179,10 @@ public class MenuActivity extends AppCompatActivity {
 
                     case R.id.about_app:
                         navItemIndex = 5;
+                        Uri gmmIntentUri = Uri.parse("geo:17.4122998,78.2679575?z=10&q=police stations");
+                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                        mapIntent.setPackage("com.google.android.apps.maps");
+                        startActivity(mapIntent);
 
 
 
