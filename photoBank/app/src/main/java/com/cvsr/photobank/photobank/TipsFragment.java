@@ -199,9 +199,9 @@ public class TipsFragment extends Fragment {
         q17.add("Some women choose to carry pepper spray or a firearm as a method of defense. While that’s fine, make sure that you know how to use your weapon of choice properly and effectively. Also, don’t carry anything if you’re not willing to use it because then it just becomes something that the bad guy can take and use against you.");
         listDataChild.put(listDataHeader.get(17), q17);
 
-        listDataHeader.add(" What is the default value of byte datatype in Java?");
+        listDataHeader.add(" Lipstick Shaped 2 In 1 Device For Women Safety With Flashlight");
         List<String> q18 = new ArrayList<String>();
-        q18.add("Default value of byte datatype is 0.");
+        q18.add("The small size of the device (5 inch) makes this unique and super portable. This lipstick with rechargeable battery goes wherever you go... for your safety, convenience, and peace of mind. It has real look and feel like lipstick is equipped with 180 Lumens flashlight .");
         listDataChild.put(listDataHeader.get(18), q18);
 
         listDataHeader.add("Trust your gut");

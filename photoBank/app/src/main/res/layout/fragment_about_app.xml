@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="There were cases where women went into trouble due to their less physical strength and to overcome this, our application provide self-defensing moves where they can learn and utilise their existing strength for their self protection. Our application gives self-rescuing tactics which improves their firmness and mental-strength. Women can now protect themselves from the attackers instead of undergoing pain. And if there exists a situation where they can’t handle, our application provide a list of help-lines which can reach them in the minute of a phone call.
+"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="16sp"
+        android:lineSpacingExtra="12sp"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimary" />
+</LinearLayout>

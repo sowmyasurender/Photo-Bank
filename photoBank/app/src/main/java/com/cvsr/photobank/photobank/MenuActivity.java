@@ -20,6 +20,7 @@ import android.view.View;
 import com.cvsr.photobank.photobank.HomePage;
 import com.cvsr.photobank.photobank.ImageList;
 import com.cvsr.photobank.photobank.HelplineFragment;
+import com.cvsr.photobank.photobank.AboutApp;
 import com.cvsr.photobank.photobank.R;
 
 public class MenuActivity extends AppCompatActivity {
@@ -35,6 +36,7 @@ public class MenuActivity extends AppCompatActivity {
 
     private static  String TAG_FAB ="list";
     private static final String HELP_LINE = "helpline";
+    private static final String ABOUT_APP = "about";
     private static final String TAG_HOME = "home";
     private static final String TAG_TACTICS = "tips";
     private static final String TAG_SHARE = "share";
@@ -123,7 +125,9 @@ public class MenuActivity extends AppCompatActivity {
             case 3:
                 TipsFragment tipsFragment = new TipsFragment();
                 return tipsFragment;
-
+            case 6:
+                AboutApp aboutApp = new AboutApp();
+                return aboutApp;
 
             default:
                 return new HomePage();
@@ -163,6 +167,11 @@ public class MenuActivity extends AppCompatActivity {
                         CURRENT_TAG = TAG_TACTICS;
                         break;
 
+                    case R.id.about_app:
+                        CURRENT_TAG=ABOUT_APP;
+                        navItemIndex = 6;
+                        break;
+
                     case R.id.nav_profile:
                         startActivity(new Intent(MenuActivity.this, ImageList.class));
                         drawer.closeDrawers();
@@ -177,12 +186,14 @@ public class MenuActivity extends AppCompatActivity {
                         shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Hey, download this app!");
                         startActivity(shareIntent);
 
-                    case R.id.about_app:
+
+                    case R.id.police_stations:
                         navItemIndex = 5;
                         Uri gmmIntentUri = Uri.parse("geo:17.4122998,78.2679575?z=10&q=police stations");
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                         mapIntent.setPackage("com.google.android.apps.maps");
                         startActivity(mapIntent);
+
 
 
 

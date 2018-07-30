@@ -24,6 +24,10 @@
             android:title="Share App" />
 
         <item
+            android:id="@+id/police_stations"
+            android:title="police stations" />
+
+        <item
             android:id="@+id/about_app"
             android:title="About App" />
 
